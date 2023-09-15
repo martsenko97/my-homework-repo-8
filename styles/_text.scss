@@ -1,0 +1,75 @@
+:root {
+	--basic-white: #fff;
+	--color-regular: #323264;
+	--color-alt: #46466e;
+	--color-soft: #686887;
+	--color-red: #f0145a;
+	--grey-bg-alt: #ededf7;
+	--txt-grey: #b3b3ba;
+	--grey-separator: #e6e6f0;
+	--gradient-soft: linear-gradient(
+		42deg,
+		#323264 14.33%,
+		#323264 51.39%,
+		#7a425e 87.53%
+	);
+	--gradient-red: linear-gradient(323deg, #f0145a 6.7%, #693264 70.36%);
+	--gradient-supersoft: linear-gradient(
+		229deg,
+		#323264 11.93%,
+		#323264 57.17%,
+		#643e72 87.46%
+	);
+	--gradient-red-text: linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%);
+}
+
+.txt-16 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+.txt-19 {
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.txt-white {
+	color: var(--basic-white);
+}
+
+.txt-grey {
+	color: var(--txt-grey);
+}
+
+.h1 {
+	font-size: 38px;
+	font-weight: 700;
+}
+
+.h1-red {
+	font-size: 38px;
+	font-weight: 700;
+	background: var(--gradient-red); /* Використовуйте градієнт як фон тексту */
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.h2 {
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--basic-white);
+}
+
+.h3 {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.h4 {
+	font-size: 16px;
+	font-weight: 700;
+}
