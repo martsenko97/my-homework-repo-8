@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -147,6 +146,7 @@ table {
   --color-red: #f0145a;
   --grey-bg-alt: #ededf7;
   --txt-grey: #b3b3ba;
+  --active-regular: #24a3ff;
   --grey-separator: #e6e6f0;
   --gradient-soft: linear-gradient(
   	42deg,
@@ -176,6 +176,10 @@ table {
   line-height: 30px;
 }
 
+.txt-red {
+  color: var(--color-red);
+}
+
 .txt-white {
   color: var(--basic-white);
 }
@@ -192,7 +196,7 @@ table {
 .h1-red {
   font-size: 38px;
   font-weight: 700;
-  background: var(--gradient-red); /* Використовуйте градієнт як фон тексту */
+  background: var(--gradient-red);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -310,28 +314,11 @@ body {
 .header-grid__nav {
   grid-area: nav;
 }
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .header-grid {
     grid-template-areas: "info" "logo nav";
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
   }
-}
-.header-grid__info, .header-grid__nav {
-  display: flex;
-}
-@media (max-width: 576px) {
-  .header-grid__info, .header-grid__nav {
-    justify-content: end;
-  }
-}
-.header-grid__logo {
-  grid-area: logo;
-}
-.header-grid__info {
-  grid-area: info;
-}
-.header-grid__nav {
-  grid-area: nav;
 }
 
 .lang-button-wrap {
@@ -404,7 +391,6 @@ body {
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 #scrollToBottomButton:hover {
@@ -460,4 +446,55 @@ body {
     max-width: 100%;
     padding-left: 0;
   }
+}
+
+.section-cards {
+  margin-top: 60px;
+}
+
+.section-cards__cards {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-cards__txt {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--active-regular);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.section-cards__txt:hover {
+  color: var(--color-red);
+  cursor: pointer;
+}
+
+.section-cards__cards--img {
+  margin-bottom: 30px;
+}
+
+.section-cards__cards--img {
+  max-width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  background: var(--basic-white);
+  display: flex;
+  justify-content: center;
+}
+
+.section-cards__cards--card-txt {
+  color: var(--active-regular);
+  font-size: 22px;
+}
+
+.section-cards__cards--card-txt-2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--basic-white);
+}
+
+.section-cards__cards--card-txt,
+.section-cards__cards--card-txt-2 {
+  margin-bottom: 15px;
 }/*# sourceMappingURL=main.css.map */

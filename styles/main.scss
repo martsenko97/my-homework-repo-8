@@ -103,28 +103,11 @@ body {
 	&__nav {
 		grid-area: nav;
 	}
-	@media (min-width: 576px) {
+	@media (max-width: 576px) {
 		grid-template-areas:
 			'info'
 			'logo nav';
-		grid-template-columns: auto 1fr;
-	}
-	&__info,
-	&__nav {
-		display: flex;
-		@media (max-width: 576px) {
-			justify-content: end;
-		}
-	}
-
-	&__logo {
-		grid-area: logo;
-	}
-	&__info {
-		grid-area: info;
-	}
-	&__nav {
-		grid-area: nav;
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -197,7 +180,6 @@ body {
 	padding: 5px 10px;
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
 }
 #scrollToBottomButton:hover {
 	background-color: var(--color-red);
@@ -250,4 +232,55 @@ body {
 		max-width: 100%;
 		padding-left: 0;
 	}
+}
+
+.section-cards {
+	margin-top: 60px;
+}
+
+.section-cards__cards {
+	margin-top: 60px;
+	padding-bottom: 60px;
+}
+
+.section-cards__txt {
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--active-regular);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&:hover {
+		color: var(--color-red);
+		cursor: pointer;
+	}
+}
+
+.section-cards__cards--img {
+	margin-bottom: 30px;
+}
+
+.section-cards__cards--img {
+	max-width: 92px;
+	height: 92px;
+	border-radius: 24px;
+	background: var(--basic-white);
+	display: flex;
+	justify-content: center;
+}
+
+.section-cards__cards--card-txt {
+	color: var(--active-regular);
+	font-size: 22px;
+}
+
+.section-cards__cards--card-txt-2 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	color: var(--basic-white);
+}
+
+.section-cards__cards--card-txt,
+.section-cards__cards--card-txt-2 {
+	margin-bottom: 15px;
 }

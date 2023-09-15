@@ -6,6 +6,7 @@
 	--color-red: #f0145a;
 	--grey-bg-alt: #ededf7;
 	--txt-grey: #b3b3ba;
+	--active-regular: #24a3ff;
 	--grey-separator: #e6e6f0;
 	--gradient-soft: linear-gradient(
 		42deg,
@@ -35,6 +36,10 @@
 	line-height: 30px;
 }
 
+.txt-red {
+	color: var(--color-red);
+}
+
 .txt-white {
 	color: var(--basic-white);
 }
@@ -51,8 +56,7 @@
 .h1-red {
 	font-size: 38px;
 	font-weight: 700;
-	background: var(--gradient-red); /* Використовуйте градієнт як фон тексту */
-
+	background: var(--gradient-red);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
